@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<body background="https://thumbs.dreamstime.com/b/textura-del-fondo-blanco-de-la-pared-para-composici%C3%B3n-contexto-revista-p%C3%A1gina-web-o-el-dise%C3%B1o-gr%C3%A1fico-134248506.jpg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pasatiempos</title>
+     <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyBdmqFzA0E_V-XLexKIkgYplmVdBJTExjY",
+        authDomain: "etsw-b0c4c.firebaseapp.com",
+        projectId: "etsw-b0c4c",
+        storageBucket: "etsw-b0c4c.appspot.com",
+        messagingSenderId: "212644851837",
+        appId: "1:212644851837:web:d490874be89d8a19b44114",
+        measurementId: "G-0DE106JLBB"
+      };
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+</head>
+
+<body>
+<center>
+<h1 style="font-size: 80px;">Pasatiempos</h1>
+<ol id="lista" class="lista"><li>
+                <a href="addpasatiempo.html"><strong>Comer</strong></a>
+            </li><li>
+                <a href="addpasatiempo.html"><strong>Dormir</strong></a>
+            </li>
+            <li>
+                <a href="addpasatiempo.html"><strong>Estudiar</strong></a>
+            </li>
+            <li>
+                <a href="addpasatiempo.html"><strong>Fiesta</strong></a>
+            </li>
+            <li>
+                <a href="addpasatiempo.html"><strong>Programar</strong></a>
+            </li>
+</ol>
+<button type="button" onclick="location.href='index.html'" style="background: #2BF1C4;">Sesión</button>
+<button onclick="location.href='addpasatiempo.html'" style="background: #2BF1C4;">Agregar nuevo pasatiempo</button>
+<footer style="font-size: 30px;">Copyright &copy; 2021 David Hernández Domínguez</footer>
+</center>
+</body>
+
+</html>

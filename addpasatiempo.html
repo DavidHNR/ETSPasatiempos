@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<body background="https://thumbs.dreamstime.com/b/textura-del-fondo-blanco-de-la-pared-para-composici%C3%B3n-contexto-revista-p%C3%A1gina-web-o-el-dise%C3%B1o-gr%C3%A1fico-134248506.jpg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agregar</title>
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+    <script src="util.js"></script>
+    <link rel="stylesheet" href="dinamico.css">
+    <script type="module" src="footer.js"></script>
+    <meta http-equiv="Expires" content="0">
+</head>
+
+<body>
+<center>
+<form action="javascript:guarda()">
+    <header>
+        <br>
+        <herramientas-abc></herramientas-abc>
+        <h1 id="pasatiempo" style="font-size: 80px;">Pasatiempo Nuevo</h1>
+
+    </header>
+    <p><input id="inpasatiempo" type="text" style="width: 500px;" placeholder="pasatiempo" required></p>
+</form>
+<button type="button" onclick="location.href='index.html'" style="background: #2BF1C4;">Sesión</button>
+<button onclick="location.href='pasatiempos.html'" style="background: #2BF1C4;">Pasatiempos</button>
+<button id="elimina" style="background: #2BF1C4;">Eliminar</button>
+<button id="guardap" type="submit" style="background: #2BF1C4;">Guardar</button>
+<footer style="font-size: 30px;">Copyright &copy; 2021 David Hernández Domínguez</footer>
+</center>
+    <script >
+        async function guarda() {
+        try {
+            if (id) {
+                await firestore.collection("PASATIEMPO").doc(id).set(leeModelo());
+            } else {
+                await firestore.collection("PASATIEMPO").add(leeModelo());
+            }
+            agrega();
+        } catch (e) {
+            procesaError(e);
+        }
+    }
+    </script>    
+</body>
+
+</html>
